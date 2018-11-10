@@ -65,6 +65,7 @@ defmodule Mix.Tasks.StartPostgres do
   use Mix.Task
 
   def run(_) do
-    Mix.shell.info "hello"
+    Mix.shell.info "Starting Postgres..."
+    System.cmd("docker", ["run", "--rm", "-d", "-e", "POSTGRES_PASSWORD=postgres", "-p", "5432:5432", "--name", "flaming_postgres", "postgres"])
   end
 end
