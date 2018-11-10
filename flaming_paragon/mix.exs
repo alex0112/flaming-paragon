@@ -60,3 +60,11 @@ defmodule FlamingParagon.MixProject do
     ]
   end
 end
+
+defmodule Mix.Tasks.StartPostgres do
+  use Mix.Task
+
+  def run(_) do
+    Mix.shell.info "hello"
+  end
+end
